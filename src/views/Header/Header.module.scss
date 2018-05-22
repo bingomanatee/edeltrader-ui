@@ -1,0 +1,38 @@
+@import './../style/theme';
+
+.Header {
+
+}
+
+.body {
+
+}
+
+.head {
+  @include headMain();
+  @include text-shadow(3px, 2px, 0, rgb(25, 200, 10));
+  padding-top: $pagePaddingV;
+  text-align: center;
+  @media screen and(max-width: 1024px) {
+    margin-bottom: 0;
+  }
+}
+
+.headSub {
+
+}
+
+.menuH {
+  padding: 0 $pagePaddingH;
+  font-family: $avenirDemi;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.MenuLink, .MenuLink:hover, .MenuLink:visited {
+  color: black;
+  text-decoration: none;
+  padding: 0.25rem 2rem;
+  font-size: $baseFontSize;
+}

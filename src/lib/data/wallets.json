@@ -1,0 +1,48 @@
+{
+  "accounts": [
+    {
+      "account_id": 1,
+      "exchange_id": "gdax",
+      "exchange_name": "GDAX",
+      "wallets": [
+        {
+          "symbol": "BTC",
+          "name": "Bitcoin",
+          "balance": 12
+        },
+        {
+          "symbol": "DOGE",
+          "name": "Dogecoin",
+          "balance": 300
+        },
+        {
+          "symbol": "ECASH",
+          "name": "Ethereum Cash",
+          "balance": 150
+        },
+        {
+          "symbol": "LTC",
+          "name": "Litecoin",
+          "balance": 34
+        }
+      ]
+    },
+    {
+      "account_id": 2,
+      "exchange_id": "binance",
+      "exchange_name": "Binance",
+      "wallets": [
+        {
+          "symbol": "DOGE",
+          "name": "Dogecoin",
+          "balance": 1200
+        },
+        {
+          "symbol": "ECASH",
+          "name": "Ethereum Cash",
+          "balance": 1502
+        }
+      ]
+    }
+  ]
+}

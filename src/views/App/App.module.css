@@ -1,0 +1,77 @@
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+.tableHead {
+  font-family: AvenirNextLTPro-Demi, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.125rem;
+  height: 100%;
+  justify-items: flex-end;
+  line-height: 33px;
+  padding: 2px; }
+
+.tableHeadNumeric {
+  font-family: AvenirNextLTPro-Demi, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.125rem;
+  height: 100%;
+  justify-items: flex-end;
+  line-height: 33px;
+  flex-direction: row-reverse;
+  display: flex; }
+
+.tableCell {
+  font-family: AvenirNextLTPro-Demi, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.125rem;
+  height: 100%;
+  justify-items: flex-end;
+  line-height: 33px;
+  padding: 2px; }
+
+.tableCellNumeric {
+  font-family: AvenirNextLTPro-Demi, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.125rem;
+  height: 100%;
+  justify-items: flex-end;
+  line-height: 33px;
+  flex-direction: row-reverse;
+  display: flex;
+  padding: 2px; }
+
+.tableMain {
+  outline: transparent; }
+
+.App {
+  height: 100%;
+  width: 100%; }
+
+.AppFrame {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%; }
+
+.Main {
+  flex-grow: 1;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.Column {
+  width: 13rem;
+  flex-grow: 0;
+  height: 100%;
+  overflow: hidden; }
+
+.PageOuterFrame {
+  margin: 0 0.85rem; }
+
+/*# sourceMappingURL=App.module.css.map */

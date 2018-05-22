@@ -1,0 +1,16 @@
+@import '../style/theme';
+
+.MainCurrencies {
+
+}
+
+.body {
+
+}
+
+.head {
+}
+
+.headSub {
+  @include headSub();
+}

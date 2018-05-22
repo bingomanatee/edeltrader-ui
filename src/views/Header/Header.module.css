@@ -1,0 +1,81 @@
+/* -------------------------------------------------------------
+  Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
+  By: Matthieu Aussaguel, http://www.mynameismatthieu.com, @matthieu_tweets
+
+  List of CSS3 Sass Mixins File to be @imported and @included as you need
+
+  The purpose of this library is to facilitate the use of CSS3 on different browsers avoiding HARD TO READ and NEVER
+  ENDING css files
+
+  note: All CSS3 Properties are being supported by Safari 5
+  more info: http://www.findmebyip.com/litmus/#css3-properties
+
+------------------------------------------------------------- */
+.tableHead {
+  font-family: AvenirNextLTPro-Demi, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.125rem;
+  height: 100%;
+  justify-items: flex-end;
+  line-height: 33px;
+  padding: 2px; }
+
+.tableHeadNumeric {
+  font-family: AvenirNextLTPro-Demi, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.125rem;
+  height: 100%;
+  justify-items: flex-end;
+  line-height: 33px;
+  flex-direction: row-reverse;
+  display: flex; }
+
+.tableCell {
+  font-family: AvenirNextLTPro-Demi, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.125rem;
+  height: 100%;
+  justify-items: flex-end;
+  line-height: 33px;
+  padding: 2px; }
+
+.tableCellNumeric {
+  font-family: AvenirNextLTPro-Demi, "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 1.125rem;
+  height: 100%;
+  justify-items: flex-end;
+  line-height: 33px;
+  flex-direction: row-reverse;
+  display: flex;
+  padding: 2px; }
+
+.tableMain {
+  outline: transparent; }
+
+.head {
+  font-family: AvenirNextLTPro-Bold, "Helvetica Neue", Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.6875rem;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0.5625rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.25rem;
+  text-shadow: 3px 2px 0 #19c80a;
+  padding-top: 0.5rem;
+  text-align: center; }
+  @media screen and (max-width: 1024px) {
+    .head {
+      margin-bottom: 0; } }
+
+.menuH {
+  padding: 0 0.85rem;
+  font-family: AvenirNextLTPro-Demi, "Helvetica Neue", Helvetica, sans-serif;
+  display: flex;
+  flex-direction: row; }
+
+.MenuLink, .MenuLink:hover, .MenuLink:visited {
+  color: black;
+  text-decoration: none;
+  padding: 0.25rem 2rem;
+  font-size: 1.125rem; }
+
+/*# sourceMappingURL=Header.module.css.map */

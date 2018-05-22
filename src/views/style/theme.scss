@@ -1,0 +1,98 @@
+@import './css3-mixins.scss';
+
+$avenirDemi: AvenirNextLTPro-Demi, 'Helvetica Neue', Helvetica, sans-serif;
+$avenirMedium: AvenirNextLTPro-Medium, 'Helvetica Neue', Helvetica, sans-serif;
+$avenirBold: AvenirNextLTPro-Bold, 'Helvetica Neue', Helvetica, sans-serif;
+$baseFontSize: 1.125rem;
+
+$pagePaddingH: 0.85rem;
+$pagePaddingV: 0.5rem;
+
+@mixin unpad() {
+  padding: 0;
+  margin: 0;
+}
+@mixin headBase() {
+  font-family: $avenirBold;
+  font-weight: 700;
+  font-size: $baseFontSize * 1.5;
+  @include unpad();
+  margin-bottom: $baseFontSize/2;
+  text-align: center;
+}
+
+@mixin headMain {
+  @include headBase();
+  text-transform: uppercase;
+  font-size: $baseFontSize * 2;
+}
+
+@mixin headSub {
+  @include headBase();
+  font-family: $avenirMedium;
+  font-weight: 400;
+}
+
+@mixin tableBase() {
+  font-family: $avenirDemi;
+  font-size:   $baseFontSize;
+  height: 100%;
+  justify-items: flex-end;
+  line-height: 33px;
+}
+@mixin tableHead {
+  @include tableBase();
+  padding: 2px;
+  text-transform: none !important;
+  color: red;
+}
+
+@mixin tableNumeric() {
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+@mixin tableHead {
+  @include tableBase();
+  padding: 2px;
+}
+
+@mixin tableHeadNumeric {
+  @include tableBase();
+  @include tableNumeric();
+}
+
+@mixin tableCell {
+  @include tableBase();
+  padding: 2px;
+}
+
+@mixin tableCellNumeric {
+  @include tableBase();
+  @include tableNumeric();
+  padding: 2px;
+}
+
+.tableHead {
+  @include tableHead();
+}
+
+.tableHeadNumeric {
+  @include tableHeadNumeric();
+}
+
+.tableRow {
+
+}
+
+.tableCell {
+  @include tableCell();
+}
+
+.tableCellNumeric {
+  @include tableCellNumeric();
+}
+
+.tableMain{
+  outline: transparent;
+}

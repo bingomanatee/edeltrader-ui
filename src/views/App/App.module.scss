@@ -1,0 +1,32 @@
+@import '../style/theme';
+
+.App {
+  height: 100%;
+  width: 100%;
+}
+
+.AppFrame {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 100%;
+}
+
+.Main {
+  flex-grow: 1;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+}
+
+.Column {
+  width: 13rem;
+  flex-grow: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.PageOuterFrame {
+  margin: 0 $pagePaddingH;
+}
