@@ -41,7 +41,7 @@ export default injectState(withRouter(class Orders extends Component {
   render () {
     const {state, effects, history, match} = this.props;
     const {orders} = state;
-
+    console.log('state orders: ', orders);
     const _getRow = (index) => {
       return orders[index.index] || {};
     }
@@ -61,7 +61,7 @@ export default injectState(withRouter(class Orders extends Component {
                 cellRenderer={_getCurrencyIcon}/>
         <Column label="Currency" dataKey="currencyName" width={200 * SCALE} className={style.tableCell}/>
 
-        <Column label="Type" dataKey="type" width={100 * SCALE} className={style.tableCell}/>
+        <Column label="Type" dataKey="side" width={100 * SCALE} className={style.tableCell}/>
 
         <Column label=" " dataKey="currencySymbol2" width={50 * SCALE}
                 cellRenderer={_getCurrencyIcon}/>
@@ -82,7 +82,7 @@ export default injectState(withRouter(class Orders extends Component {
         <Column label="Created" dataKey="created_at" width={200 * SCALE} className={style.tableCell}
                 cellRenderer={_getDate}
         />
-        <Column label="Complete" dataKey="complete" width={150 * SCALE} className={style.tableCellNumeric}
+        <Column label="Remaining" dataKey="remaining" width={150 * SCALE} className={style.tableCellNumeric}
                 cellRenderer={_getPercent}
         />
       </Table> : ''}

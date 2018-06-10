@@ -10,6 +10,7 @@ import style from './CurrencyIcon.module.css';
 import {injectState, bottle} from './../../lib';
 import ReactSVG from 'react-svg';
 
+const checkedPaths = new Map();
 
 import {Component} from 'react';
 
@@ -21,6 +22,8 @@ export default injectState(withRouter(class CurrencyIcon extends Component {
     if (!height) {
       height = 30;
     }
+
+    console.log('icon symbol:', symbol);
 
     if (!symbol) {
       return <div className={style['CurrencyIcon']}>
@@ -48,7 +51,7 @@ export default injectState(withRouter(class CurrencyIcon extends Component {
       return false;
     }
     const {ccySVGs} = state;
-    return ccySVGs[symbol] || false;
+    return ccySVGs[symbol] === true || false;
   }
 
   componentDidMount () {

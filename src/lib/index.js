@@ -21,7 +21,7 @@ mySeed.addSideEffect('loadOrders', (effects) => {
   bottle.container.orderAPI()
     .then((data) => {
       console.log('loaded orders:', data);
-      return effects.setOrders(data.orders);
+      return effects.setOrders(data);
     });
 });
 
@@ -33,14 +33,19 @@ mySeed.addSideEffect('loadWallets', (effects) => {
 mySeed.addObjectAndSetEffect('ccySVGs', {});
 mySeed.addStateSideEffect('checkCcySVGs', (effects, state, symbol) => {
   const {ccySVGs} = state;
+  console.log('checking symbol', symbol);
 
   if (ccySVGs.hasOwnProperty(symbol)) {
+    console.log('ccySVGs symbol === ', ccySVGs[symbol]);
     // checked, or checking
     return;
   }
   effects.setCcySVG(symbol, '?')
          .then(() => bottle.container.ccySVGAPI(symbol))
-         .then((result) => effects.setCcySVG(symbol, !!result))
+         .then((result) => {
+           console.log('checked symbol ', symbol, 'result: ', result);
+           effects.setCcySVG(symbol, !!result);
+         })
          .catch((err) => effects.setCcySVG(symbol, false));
 });
 mySeed.addStateSideEffect('setCcySVG', (effects, state, symbol, value) => {
