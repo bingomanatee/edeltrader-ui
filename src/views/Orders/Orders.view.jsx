@@ -55,7 +55,7 @@ export default injectState(withRouter(class Orders extends Component {
                                         rowClassName={style.tableRow}
                                         headerStyle={({'textTransform': 'none'})}
                                         gridStyle={({outline: 'transparent'})}
-                                        height={300} width={1460 * SCALE}>
+                                        height={500} width={1460 * SCALE}>
 
         <Column label=" " dataKey="currencySymbol" width={50 * SCALE}
                 cellRenderer={_getCurrencyIcon}/>
@@ -82,7 +82,7 @@ export default injectState(withRouter(class Orders extends Component {
         <Column label="Created" dataKey="created_at" width={200 * SCALE} className={style.tableCell}
                 cellRenderer={_getDate}
         />
-        <Column label="Remaining" dataKey="remaining" width={150 * SCALE} className={style.tableCellNumeric}
+        <Column label="Compllete" dataKey="complete" width={150 * SCALE} className={style.tableCellNumeric}
                 cellRenderer={_getPercent}
         />
       </Table> : ''}

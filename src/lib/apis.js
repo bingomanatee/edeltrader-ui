@@ -29,8 +29,10 @@ export default (bottle) => {
             let {exchange, symbol} = orderMarket;
             let [currencySymbol, currencySymbol2] = symbol.split('/');
             let [currencyName, currencyName2] = [currencySymbol, currencySymbol2].map(s => s === 'USD' ? 'Dollars' :  cryptocurrencies[s]);
-
-            return {exchange, symbol, currencySymbol, currencySymbol2, currencyName, currencyName2, ...order};
+            let amount = parseFloat(order.amount);
+            let remaining = parseFloat(order.amount);
+            let complete = (amount - remaining)/amount;
+            return {exchange, symbol, currencySymbol, currencySymbol2, currencyName, currencyName2, complete, ...order};
           } else {
             console.log('cannot find market ', order.market_id);
           }
