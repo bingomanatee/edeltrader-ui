@@ -5,7 +5,7 @@ import {BrowserRouter, Route} from 'react-router-dom'
 const root = document.getElementById('root');
 const load = () => render((
   <AppContainer>
-    <BrowserRouter>
+    <BrowserRouter basename="/react">
       <AppView />
     </BrowserRouter>
   </AppContainer>
