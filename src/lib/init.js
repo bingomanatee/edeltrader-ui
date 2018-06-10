@@ -10,8 +10,8 @@ export default () => {
   bottle.constant('RES_HUGE', 1690);
 
   bottle.constant('links', [
-    {id: 0, label: 'Home', url: '/'},
-    {id: 1, label: 'Orders', url: '/orders'}
+    {id: 0, label: 'Home', url: ''},
+    {id: 1, label: 'Orders', url: 'orders'}
   ]);
 
   APIs(bottle);

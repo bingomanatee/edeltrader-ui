@@ -56,7 +56,7 @@ export default (bottle) => {
   });
 
   bottle.factory('svgPathForSymbol', () => (symbol) => {
-    return `/static/images/cc-icons/color/${symbol.toLowerCase()}.svg`;
+    return `/react/static/images/cc-icons/color/${symbol.toLowerCase()}.svg`;
   });
 
   bottle.factory('ccySVGAPI', (container) => {
