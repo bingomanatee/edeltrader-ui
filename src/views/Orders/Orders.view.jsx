@@ -33,7 +33,7 @@ const _getDate = (props) => {
 const _getPercent = (props) => {
   const {cellData} = props;
   return <div>
-    {Math.round(100 * cellData)}%
+    {Math.round(100 * parseFloat(cellData))}%
   </div>
 }
 
@@ -44,7 +44,7 @@ export default injectState(withRouter(class Orders extends Component {
     console.log('state orders: ', orders);
     const _getRow = (index) => {
       return orders[index.index] || {};
-    }
+    };
 
     const SCALE = 0.75;
     return (<div className={style['Orders']}>
@@ -61,7 +61,7 @@ export default injectState(withRouter(class Orders extends Component {
                 cellRenderer={_getCurrencyIcon}/>
         <Column label="Currency" dataKey="currencyName" width={200 * SCALE} className={style.tableCell}/>
 
-        <Column label="Type" dataKey="side" width={100 * SCALE} className={style.tableCell}/>
+        <Column label="Type" dataKey="type" width={100 * SCALE} className={style.tableCell}/>
 
         <Column label=" " dataKey="currencySymbol2" width={50 * SCALE}
                 cellRenderer={_getCurrencyIcon}/>
