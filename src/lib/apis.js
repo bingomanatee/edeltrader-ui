@@ -50,7 +50,7 @@ export default (bottle) => {
         .then((response) => {
           realMarketData = response.data;
           setTimeout(() => realMarketData = false, 60000);
-          return response.json();
+          return realMarketData;
         });
     }
   });
