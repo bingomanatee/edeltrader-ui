@@ -28,6 +28,7 @@ export default wrapComponentWithState(class AppView extends Component {
               <Route path="/orders" exact component={Orders} />
             </div>)}/>
             <Media query={{minWidth: RES_LARGE + 'px'}} render={() => (<div>
+              <Route path="/index.html" exact component={MainCurrencies} />,
               <Route path="/" exact component={MainCurrencies} />,
               <Route path="/orders" exact component={Orders} />
           </div>)}/>
