@@ -16,8 +16,8 @@ export default (bottle) => {
   bottle.factory('orderAPI', (container) => {
     return () => Promise.all(
       [
-        USE_STOCK_DATA ? Promise.resolve(ORDER_DATA) : axios.get('/api/orders')
-      .then((response) => response.json()),
+       axios.get('/api/orders')
+      .then((response) => response.data),
       container.marketAPI()
       ])
       .then((results) => {
@@ -48,7 +48,7 @@ export default (bottle) => {
     } else {
       return () => axios.get('/api/markets')
         .then((response) => {
-          realMarketData = response.json();
+          realMarketData = response.data;
           setTimeout(() => realMarketData = false, 60000);
           return response.json();
         });

@@ -21,7 +21,7 @@ mySeed.addSideEffect('loadOrders', (effects) => {
   bottle.container.orderAPI()
     .then((data) => {
       console.log('loaded orders:', data);
-      return effects.setOrders(data);
+       effects.setOrders(data);
     });
 });
 
