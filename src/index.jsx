@@ -1,13 +1,13 @@
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import AppView from './views/App/App.view';
-import {HashRouter, Route} from 'react-router-dom'
+import {BrowserRouter, Route} from 'react-router-dom'
 const root = document.getElementById('root');
 const load = () => render((
   <AppContainer>
-    <HashRouter basename="/react">
+    <BrowserRouter basename="/react">
       <AppView />
-    </HashRouter>
+    </BrowserRouter>
   </AppContainer>
 ), root);
 
