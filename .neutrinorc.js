@@ -4,7 +4,7 @@ module.exports = {
       {
         host: 'edelbucks.biz',
         html: {
-          baseHref: '/',
+          baseHref: '/react/',
           headHtmlSnippet: `<style type="text/css">body, html, #root {margin: 0; padding: 0; height: 100%; overflow-x: hidden; overflow-y: auto;}</style>`,
           title: 'EdelBucks',
           links: [
